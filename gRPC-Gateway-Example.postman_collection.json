@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "ff30b1c4-19b9-4fc0-9da0-d4708f84aea6",
+		"name": "gRPC-Gateway-Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BiDI Stream",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"some data\"\n}\n{\n\t\"value\": \"some data\"\n}\n{\n\t\"value\": \"some data\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/bidi/stream/example/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"bidi",
+						"stream",
+						"example",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Stream",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"some data\"\n}\n{\n\t\"value\": \"some data\"\n}\n{\n\t\"value\": \"some data\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/client/stream/example/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"client",
+						"stream",
+						"example",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Stream",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"some data\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/server/stream/example/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"server",
+						"stream",
+						"example",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger Docs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value_1\": \"some data\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/swagger",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"swagger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unary RPC",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"some data\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/v1/example/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"example",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

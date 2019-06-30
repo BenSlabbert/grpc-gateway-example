@@ -1,0 +1,35 @@
+syntax = "proto3";
+package example;
+
+import "google/api/annotations.proto";
+import "messages.proto";
+
+service YourService {
+    rpc Echo(StringMessage) returns (StringMessage) {
+        option (google.api.http) = {
+            post: "/v1/example/echo"
+            body: "*"
+        };
+    }
+
+    rpc EchoServerStream(StringMessage) returns (stream StringMessage) {
+        option (google.api.http) = {
+            post: "/v1/server/stream/example/echo"
+            body: "*"
+        };
+    }
+
+    rpc EchoClientStream(stream StringMessage) returns (StringMessage) {
+        option (google.api.http) = {
+            post: "/v1/client/stream/example/echo"
+            body: "*"
+        };
+    }
+
+    rpc EchoBiDiStream(stream StringMessage) returns (stream StringMessage) {
+        option (google.api.http) = {
+            post: "/v1/bidi/stream/example/echo"
+            body: "*"
+        };
+    }
+}
